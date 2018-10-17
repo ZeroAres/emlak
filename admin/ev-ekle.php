@@ -1,3 +1,48 @@
+<?php 
+
+	if ($_SESSION["oturum"] != 1) {
+		header("Location: index.php");
+	}else{
+
+	$islem = $_GET["islem"];
+
+	if ($islem == "kontrol") {
+
+			$il = $_POST["il"];
+			$ilce = $_POST["ilce"];
+			$oncelik = $_POST["oncelik"];
+			$indirim = $_POST["indirim"];
+			$isinma = $_POST["isinma"];
+			$esyadurumu = $_POST["esyadurumu"];
+			$mulkdurumu = $_POST["mulkdurumu"];
+			$metrekare = $_POST["metrekare"];
+			$binayasi = $_POST["binayasi"];
+			$katsayisi = $_POST["katsayisi"];
+			$bulundugukat = $_POST["bulundugukat"];
+			$aciklama = $_POST["aciklama"];
+			$ucret = $_POST["ucret"];
+
+		$sorgu = $db->prepare("INSERT INTO ev (il, ilce, indirim, metrekare, bina_yasi, isinma, kat_sayisi, bulundugu_kat, esya_durumu, aciklama, ucret) VALUES (:p_il, :p_ilce, :p_indirim, :p_metrekare, :p_bina_yasi, :p_isinma, :p_kat_sayisi, :p_bulundugu_kat, :p_esya_durumu, :p_aciklama, :p_ucret)");
+		$sorgu->bindParam(":p_il", $il);
+		$sorgu->bindParam(":p_ilce", $ilce);
+		$sorgu->bindParam(":p_indirim", $indirim);
+		$sorgu->bindParam(":p_metrekare", $metrekare);
+		$sorgu->bindParam(":p_bina_yasi", $binayasi);
+		$sorgu->bindParam(":p_isinma", $isinma);
+		$sorgu->bindParam(":p_kat_sayisi", $katsayisi);
+		$sorgu->bindParam(":p_bulundugu_kat", $bulundugukat);
+		$sorgu->bindParam(":p_esya_durumu", $esyadurumu);
+		$sorgu->bindParam(":p_aciklama", $aciklama);
+		$sorgu->bindParam(":p_ucret", $ucret);
+		$sorgu->execute();
+	}
+
+}
+
+
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +54,7 @@
 	<div class="container">
 		<div class="row">
 	<div class="col-sm-3">
-		<form action="index.php?sayfa=ev-ekle&bildirim">
+		<form action="index.php?sayfa=ev-ekle&islem=kontrol" method="post">
 			<select class="form-control yerlestirme" name="il">
 			    <option value="none" selected="" disabled="">İl</option>
 			    <option value="1">Adana</option>
@@ -141,10 +186,20 @@
 	<!-- Eşya Durumu -->
 
 	<div class="col-sm-3">
-			<select class="form-control formverisi" name="isinma">
+			<select class="form-control formverisi" name="esyadurumu">
 		 		<option value="none" selected="" disabled="">Eşya Durumu</option>
 				<option value="Esyali">Eşyalı</option>
    			 	<option value="Esyasiz">Eşyasız</option>
+			</select>
+	</div>
+
+	<!-- Mülk Durumu -->
+
+	<div class="col-sm-3">
+			<select class="form-control formverisi" name="mulkdurumu">
+		 		<option value="none" selected="" disabled="">Mülk Durumu</option>
+				<option value="Kiralık">Kiralık</option>
+   			 	<option value="Satilik">Satilik</option>
 			</select>
 	</div>
 </div>
@@ -174,7 +229,21 @@
     <div class="form-group col-sm-2 formverisi-number">
       <input type="number" placeholder="Bulunduğu Kat Sayısı" class="form-control" name="bulundugukat" id="bulundugukat">
     </div>
+
+    <!-- Ücret -->
+
+    <div class="form-group col-sm-2 formverisi-number">
+      <input type="number" placeholder="Ücret" class="form-control" name="ucret" id="ucret">
+    </div>
+
+    <div class="form-group col-sm-2 formverisi-number">
+    	<textarea name="aciklama">Açıklama</textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary" style="margin-left: 200px; margin-top: 20px;">Sonraki Adım</button>
 </div>
+	
+
 		</form>
 </body>
 </html

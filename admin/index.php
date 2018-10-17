@@ -10,6 +10,8 @@
   <body onload="toplagotur();">
 <?php
 
+	include '../includes/connect.php';
+
 	    ob_start();
     session_start();
 
