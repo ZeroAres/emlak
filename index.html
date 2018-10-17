@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Emlak</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!-- Navbar -->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Anasayfa <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Yeni</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">
+                    Kayıt - Üye Ol
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Üye Ol</a>
+                    <a class="dropdown-item" href="#">Giriş Yap</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Şifreni mi unuttun ?</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Telefon (+90 *** ** **)</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<!--Slider-->
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 resimboyut" src="img/wallpaper.jpg" alt="Hayal et">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 style="opacity: 0.8; ">Hayal Et, Biz Bulalım</h3>
+                <p>Şehirde lüks bir daire</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 resimboyut" src="img/arsa.jpg" alt="Biz yapalım">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 style="opacity: 0.8; ">Hayal Et, Biz Bulalım</h3>
+                <p>Herşeyden uzak bir arsa</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100 resimboyut" src="img/isyeri.jpg" alt="Nasıl Birşey İstersin ?">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 style="opacity: 0.8; ">Hayal Et, Biz Bulalım</h3>
+                <p>Ya da bir işyeri</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Önceki</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Sonraki</span>
+    </a>
+</div>
+
+<!--Boşluk -->
+
+<div class="bosluk"></div>
+
+
+<!-- Seçenek -->
+
+<div class="container">
+
+    <!--Alert-->
+
+    <div class="alert alert-info" role="alert">
+        Nasıl Bir Yer Arıyorsun ?
+    </div>
+    <!--Button-->
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-2 offset-sm-1">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Şehir</label>
+                    <select class="form-control" onchange="shrscm()" name="sehirsecim" id="sehirsecim">
+                        <option value="0">------</option>
+                        <option value="1">Adana</option>
+                        <option value="2">Adıyaman</option>
+                        <option value="3">Afyonkarahisar</option>
+                        <option value="4">Ağrı</option>
+                        <option value="5">Amasya</option>
+                        <option value="6">Ankara</option>
+                        <option value="7">Antalya</option>
+                        <option value="8">Artvin</option>
+                        <option value="9">Aydın</option>
+                        <option value="10">Balıkesir</option>
+                        <option value="11">Bilecik</option>
+                        <option value="12">Bingöl</option>
+                        <option value="13">Bitlis</option>
+                        <option value="14">Bolu</option>
+                        <option value="15">Burdur</option>
+                        <option value="16">Bursa</option>
+                        <option value="17">Çanakkale</option>
+                        <option value="18">Çankırı</option>
+                        <option value="19">Çorum</option>
+                        <option value="20">Denizli</option>
+                        <option value="21">Diyarbakır</option>
+                        <option value="22">Edirne</option>
+                        <option value="23">Elazığ</option>
+                        <option value="24">Erzincan</option>
+                        <option value="25">Erzurum</option>
+                        <option value="26">Eskişehir</option>
+                        <option value="27">Gaziantep</option>
+                        <option value="28">Giresun</option>
+                        <option value="29">Gümüşhane</option>
+                        <option value="30">Hakkâri</option>
+                        <option value="31">Hatay</option>
+                        <option value="32">Isparta</option>
+                        <option value="33">Mersin</option>
+                        <option value="34">İstanbul</option>
+                        <option value="35">İzmir</option>
+                        <option value="36">Kars</option>
+                        <option value="37">Kastamonu</option>
+                        <option value="38">Kayseri</option>
+                        <option value="39">Kırklareli</option>
+                        <option value="40">Kırşehir</option>
+                        <option value="41">Kocaeli</option>
+                        <option value="42">Konya</option>
+                        <option value="43">Kütahya</option>
+                        <option value="44">Malatya</option>
+                        <option value="45">Manisa</option>
+                        <option value="46">Kahramanmaraş</option>
+                        <option value="47">Mardin</option>
+                        <option value="48">Muğla</option>
+                        <option value="49">Muş</option>
+                        <option value="50">Nevşehir</option>
+                        <option value="51">Niğde</option>
+                        <option value="52">Ordu</option>
+                        <option value="53">Rize</option>
+                        <option value="54">Sakarya</option>
+                        <option value="55">Samsun</option>
+                        <option value="56">Siirt</option>
+                        <option value="57">Sinop</option>
+                        <option value="58">Sivas</option>
+                        <option value="59">Tekirdağ</option>
+                        <option value="60">Tokat</option>
+                        <option value="61">Trabzon</option>
+                        <option value="62">Tunceli</option>
+                        <option value="63">Şanlıurfa</option>
+                        <option value="64">Uşak</option>
+                        <option value="65">Van</option>
+                        <option value="66">Yozgat</option>
+                        <option value="67">Zonguldak</option>
+                        <option value="68">Aksaray</option>
+                        <option value="69">Bayburt</option>
+                        <option value="70">Karaman</option>
+                        <option value="71">Kırıkkale</option>
+                        <option value="72">Batman</option>
+                        <option value="73">Şırnak</option>
+                        <option value="74">Bartın</option>
+                        <option value="75">Ardahan</option>
+                        <option value="76">Iğdır</option>
+                        <option value="77">Yalova</option>
+                        <option value="78">Karabük</option>
+                        <option value="79">Kilis</option>
+                        <option value="80">Osmaniye</option>
+                        <option value="81">Düzce</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-sm-1">
+            	<div id="spinner"></div>
+            </div>
+
+            <!-- Gizle -->
+
+            <div id="mulk-gizle" class="col-sm-2 offset-sm-1 gizle">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Mülk Durumu</label>
+                    <select class="form-control" name="mulksecim" id="mulksecim" onclick="mulk_secim_click();" onchange="mulksecim();">
+                        <option value="0">------</option>
+                        <option value="satilik">Satılık</option>
+                        <option value="kiralik">Kiralık</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-sm-1">
+            	<div id="spin_ner"></div>
+            </div>
+
+            <!--Gizle -->
+
+            <div id="ilgileniyorsun_gizle" class="form-group col-sm-2 offset-sm-1 gizle">
+                <label for="exampleFormControlSelect1">Ne ile ilgileniyorsun ?</label>
+                <select class="form-control" name="isteksecim" id="isteksecim" onclick="istek_click();" onchange="yersecim(); setTimeout('bekle()', 3000)">
+                    <option value="0">------</option>
+                    <option value="ev">Ev</option>
+                    <option value="arsa">Arsa</option>
+                    <option value="isyeri">İşyeri</option>
+                </select>
+            </div>
+            <div id="mulksecim_id"></div>
+            <div id="araniyor"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+    <script type="text/javascript" src="js/jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/scripts.bundle.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+</body>
+</html>

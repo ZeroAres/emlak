@@ -1,0 +1,60 @@
+body{
+	background-image: url("../img/adminpanel.jpg");
+}
+#kose{
+	background-color: #484848;
+	opacity: 1;
+	height: 100%;
+	margin: 0px;
+}
+#solkose{
+	background-color: #2d2d2d;
+	height: 50px;
+}
+.logoyazi{
+	color: white;
+	line-height: 50px;
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 30px;
+}
+.baslik{
+	margin-top: 20px;
+	margin-left: 50px;
+}
+.altbaslik{
+	color: white;
+	position: relative;
+	top: 10px;
+	margin-left: 70px;
+}
+.yetkili{
+	margin-left: 50px;
+	position: relative;
+	top: 10px;
+}
+.altbaslikyetkili{
+	margin-left: 60px;
+	position: relative;
+	top: 20px;
+	color: red;
+}
+#altbosluk{
+	padding-bottom: 40px;
+}
+.gorunumudegistir{
+	margin: 20px 0px 0px 50px;
+}
+.yerlestirme{
+	margin: 50px 0px 0px 50px;
+}
+.formverisi{
+	margin-left: 40px;
+	margin-top: 10px;
+}
+.formverisi-number{
+	margin: 10px 0px 0px 170px;
+}
+.sayilarr{
+	margin: 0px 0px 250px 250px;
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
+html,body{
+	margin: 0;
+	padding: 0; 
+	font-family: 'Comfortaa', cursive;
+	color: #fff;
+} 
+.p0{ padding: 0;} 
+a,a:hover,a:visited,a:active,a:focus{text-decoration: none;} 
+
+
+.thempOne{
+	background: url(../img/res1.jpg) no-repeat center fixed;
+	background-size: cover;
+}
+
+.thisPanel {
+	height: 100vh;
+    perspective: 1000px;
+}
+.panelContent {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    float: none;
+    margin: auto;
+    left: 0;
+    padding: 25px;
+    background: rgba(1, 63, 120, 0); 
+	-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+	-webkit-animation-iteration-count: 1; /* Safari 4.0 - 8.0 */
+	animation-name: example;
+	animation-duration: 2s;
+	animation-iteration-count: 1; 
+	
+    transform: rotate3d(0,1,0,0deg);
+}
+
+ 
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {transform: rotate3d(0,1,0,40deg);background: rgba(1, 63, 120,0.45);}
+    50%   {transform: rotate3d(0,1,0,-40deg)}
+    100%   {transform: rotate3d(0,1,0,0deg);background: rgba(1, 63, 120,0); }
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {transform: rotate3d(0,1,0,40deg);background: rgba(1, 63, 120,0.45);}
+    50%   {transform: rotate3d(0,1,0,-40deg)}
+    100%   {transform: rotate3d(0,1,0,0deg);background: rgba(1, 63, 120,0); }
+}
+ 
+
+.panelContent .contentPanel {
+    perspective: 600px;
+    margin: auto;
+    float: none; 
+    transform: rotate3d(0,1,0,0deg);
+}
+
+@media (max-width: 768px){ 
+	.panelContent{
+		left: 0; 
+	} 
+}
+.panelContent h2 {
+	margin: 0;
+}
+.panelContent .formGr{
+	position: relative;
+    margin: 18px 0px;
+}
+.panelContent .formGr label{
+	display: block;
+	color: #fff;
+}
+.panelContent .formGr input.textCt{
+	width: 100%;
+    background: #fff;
+	padding: 10px;
+	border: none;
+    border-bottom: 2px solid transparent;
+    border-radius: 4px;
+	color: #555;
+    font-size: 12px;
+    outline: 0;
+}
+.panelContent .formGr input.textCt:focus{ 
+    border-bottom: 2px solid #b76a21;
+}
+.panelContent .formGr.btnX{
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+.panelContent .formGr button{
+	width: 200px;
+    height: 35px;
+	display: inline-block;
+    background: #fff;
+    border:none;
+    outline: 0;
+	color: #fff;
+	margin: 5px 0 0 0;
+    font-size: 15px;
+    border-radius: 4px;
+}
+.panelContent .formGr button.login{
+    background: #002948;
+}
+.panelContent .formGr button.login:hover{
+    background: #03365d;
+}
+.panelContent .formGr button.remb{
+    background: #8a4300;
+}
+.panelContent .formGr button.remb:hover{
+    background: #9e4f04;
+}
+
+.panelContent .copyright{
+	font-size: 11px;
+    text-align: center;
+    color: #a0a0a0;
+}

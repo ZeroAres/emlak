@@ -1,0 +1,62 @@
+.bosluk{
+	margin-top: 50px;
+}
+.resimboyut{
+	height: 500px;
+}
+
+@-webkit-keyframes m-loader-rotate{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+@keyframes m-loader-rotate{to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+
+.m-loader {
+	position: relative;
+}
+.m-loader.m-loader--danger:before {
+	border-top-color: #f4516c;
+}
+.m-loader:before {
+	border-top-color: #dfe2ea;
+}
+.m-loader:before {
+	width: 1.4rem;
+	height: 1.4rem;
+	margin-top: -.7rem;
+	margin-left: -.7rem;
+	border-top-width: 2px;
+	border-right-width: 2px;
+}
+.m-loader:before {
+	content: '';
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-top: 2px solid #07d;
+	border-right: 2px solid transparent;
+	border-radius: 50%;
+	-webkit-animation: m-loader-rotate 0.6s linear infinite;
+	animation: m-loader-rotate 0.6s linear infinite;
+}
+@keyframes spinner {
+	to {transform: rotate(360deg);}
+}
+.spinner:before {
+	content: '';
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	margin-left: -10px;
+	border-radius: 50%;
+	border: 2px solid transparent;
+	border-top-color: #07d;
+	border-bottom-color: #07d;
+	animation: spinner .8s ease infinite;
+}
+.gizle{
+	display: none;
+}
